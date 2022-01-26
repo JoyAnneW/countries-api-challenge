@@ -9,7 +9,12 @@ html {
 }
 body {
 	font-family: "Nunito Sans", sans-serif;
+	background-color: hsl(0, 0%, 98%);
 }
+/* 
+*****************
+HEADER
+***************** */
 header {
 	font-size: 2rem;
 	display: flex;
@@ -21,9 +26,72 @@ header {
 
 .header--main-heading {
 	font-weight: 800;
+	color: hsl(200, 15%, 8%);
 }
 .header__theme-toggler {
 	font-weight: 600;
 	display: flex;
 	gap: 1.2rem;
+}
+
+/* 
+*****************
+SEARCH AND FILTER
+***************** */
+
+.form {
+	margin: 3rem;
+}
+.search {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.search--icon {
+	font-size: 4rem;
+	color: rgb(189, 188, 188);
+	position: absolute;
+	left: 3rem;
+}
+
+.search--input,
+.dropdown--options {
+	padding: 3rem;
+	border-radius: 5px;
+
+	border: none;
+
+	font-size: 2rem;
+	font-weight: 300;
+}
+.search--input {
+	box-shadow: rgba(149, 157, 165, 0.3) 0px 5px 20px;
+	width: 100%;
+	color: rgb(141, 141, 141);
+	text-indent: 6rem;
+}
+.dropdown--container {
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 50%;
+	margin-top: 7rem;
+}
+
+.dropdown--options {
+	margin-left: 3rem;
+	width: 100%;
+	-webkit-appearance: none;
+	/* for webkit browsers/ */
+	-moz-appearance: none;
+	/* for firefox */
+	appearance: none;
+	background-color: #fff;
+	color: hsl(200, 15%, 8%);
+}
+
+.dropdown--icon {
+	font-size: 2rem;
+	position: absolute;
+	right: 3rem;
 }
