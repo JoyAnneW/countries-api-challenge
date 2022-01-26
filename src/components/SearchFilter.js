@@ -17,9 +17,7 @@ export default function SearchFilter() {
 			<div className="dropdown--container">
 				<label htmlFor="regions"></label>
 				<select name="regions" id="regions" className="dropdown--options">
-					<option value="" selected>
-						Filter by Region
-					</option>
+					<option value="">Filter by Region</option>
 
 					<option value="Africa">Africa</option>
 					<option value="America">America</option>
