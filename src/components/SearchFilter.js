@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineSearch, AiOutlineDown } from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
 
 export default function SearchFilter() {
 	return (
@@ -14,19 +14,6 @@ export default function SearchFilter() {
 					/>
 				</div>
 			</form>
-			<div className="dropdown--container">
-				<label htmlFor="regions"></label>
-				<select name="regions" id="regions" className="dropdown--options">
-					<option value="">Filter by Region</option>
-
-					<option value="Africa">Africa</option>
-					<option value="America">America</option>
-					<option value="Asia">Asia</option>
-					<option value="Europe">Europe</option>
-					<option value="Oceania">Oceania</option>
-				</select>
-				<AiOutlineDown className="dropdown--icon" />
-			</div>
 		</>
 	);
 }
