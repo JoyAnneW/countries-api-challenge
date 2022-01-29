@@ -110,4 +110,11 @@ SEARCH AND FILTER
 .dropdown .option {
 	cursor: pointer;
 	line-height: 4rem;
+	display: block;
+}
+
+.dropdown .option.selected,
+.dropdown .option:hover {
+	background-color: #f2f9fc;
+	color: #333;
 }

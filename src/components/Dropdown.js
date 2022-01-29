@@ -12,7 +12,15 @@ export default function Dropdown({ regions, value, onChange }) {
 	const [open, setOpen] = useState(false);
 
 	const region = regions.map((region) => (
-		<div className="option">{region}</div>
+		<div
+			className={`option ${value === region ? "selected" : null}`}
+			onClick={() => {
+				onChange(region);
+				setOpen(false);
+			}}
+		>
+			{region}
+		</div>
 	));
 
 	return (
@@ -21,7 +29,9 @@ export default function Dropdown({ regions, value, onChange }) {
 				className="control"
 				onClick={() => setOpen((prevState) => !prevState)}
 			>
-				<div className="selected-value">Filter by Region</div>
+				<div className="selected-value">
+					{value ? value : "Filter by Region"}
+				</div>
 				<div className={`arrow ${open ? "open" : null}`}>
 					<AiOutlineDown className="dropdown--icon" />
 				</div>
