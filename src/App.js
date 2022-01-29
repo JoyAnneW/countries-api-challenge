@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "./components/Header";
-import SearchFilter from "./components/SearchFilter";
+import Search from "./components/Search";
 import Dropdown from "./components/Dropdown";
 import { regions } from "./components/Dropdown";
 
@@ -11,7 +11,7 @@ function App() {
 		<div className="App">
 			<Header />
 			<main>
-				<SearchFilter menuPlacement="bottom" />
+				<Search />
 
 				{/* style expects a js object. this will constrain the dropdown to a certain width */}
 				<div style={{ width: "50%" }}>
