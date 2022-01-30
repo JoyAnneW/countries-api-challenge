@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 export const regions = ["Africa", "America", "Asia", "Europe", "Oceania"];
 //for now putting regions outside of function until I do the API call
@@ -10,6 +10,17 @@ export default function Dropdown({ regions, value, onChange }) {
 	// we need to use state to track whether the Dropdown is open or not
 
 	const [open, setOpen] = useState(false);
+	const ref = useRef(null);
+
+	useEffect(() => {
+		document.addEventListener("click", close);
+		return () => document.removeEventListener("click", close);
+	}, []);
+
+	function close(event) {
+		console.dir(event.target, ref.current);
+		setOpen(event && event.target === ref.current);
+	}
 
 	const region = regions.map((region) => (
 		<div
@@ -29,7 +40,7 @@ export default function Dropdown({ regions, value, onChange }) {
 				className="control"
 				onClick={() => setOpen((prevState) => !prevState)}
 			>
-				<div className="selected-value">
+				<div className="selected-value" ref={ref}>
 					{value ? value : "Filter by Region"}
 				</div>
 				<div className={`arrow ${open ? "open" : null}`}>
