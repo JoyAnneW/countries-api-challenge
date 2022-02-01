@@ -18,7 +18,7 @@ export default function Dropdown({ regions, value, onChange }) {
 	}, []);
 
 	function close(event) {
-		console.dir(event.target, ref.current);
+		// console.dir(event.target, ref.current);
 		setOpen(event && event.target === ref.current);
 	}
 
