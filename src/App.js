@@ -1,38 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Search from "./components/Search";
 import Dropdown from "./components/Dropdown";
 import { regions } from "./components/Dropdown";
-import FetchWrapper from "./FetchWrapper";
+
 import Card from "./components/Card";
 
 function App() {
-	// API Call. Must be inside useEfect. Empty dependencies array means the function will run only once on load.
+	// API Call. Must be inside useEffect. Empty dependencies array means the function will run only once on load.
 	// const countryName = "";
 	// const region = "";
 	// const population = "";
 	// const capital = "";
 	// const flag = "";
-
-	useEffect(() => {
-		const API = new FetchWrapper("https://restcountries.com/v2");
-		API.get("/all").then((data) => {
-			console.log(data);
-			const relevantData = data.map((country) => {
-				return {
-					countryName: country.name,
-					flag: country.flag,
-					region: country.region,
-					capital: country.capital,
-				};
-			});
-			console.log(relevantData);
-		});
-	}, []);
-
-	function mapFunc(field) {
-		relevantData.map((obj) => obj.field);
-	}
 
 	// setting state to keep track of the values in the dropdown.
 
@@ -52,7 +32,7 @@ function App() {
 				{console.log(regions)}
 			</div>
 			<main>
-				<Card country={mapFunc(countryName)} />
+				<Card />
 			</main>
 		</div>
 	);
