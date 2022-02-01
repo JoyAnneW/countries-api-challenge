@@ -123,17 +123,32 @@ SEARCH AND FILTER
 CARD
 ***************** */
 .card {
-	width: 50%;
-	border: 1px solid black;
+	width: 60%;
+
 	margin: 7rem auto 3rem;
 	border-radius: 5px;
 	color: hsl(209, 23%, 22%);
+	display: flex;
+	flex-direction: column;
+	box-shadow: rgba(149, 157, 165, 0.3) 0px 5px 20px;
+}
+.card img {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.card--text {
+	padding: 3rem;
+	padding-top: 0;
+	font-size: 2rem;
 }
 .card--title {
+	font-size: 4rem;
+	margin: 3rem 0;
 }
 .card--details {
 	list-style-type: none;
+	line-height: 4rem;
 }
 .card span {
-	font-weight: bold;
+	font-weight: 600;
 }

@@ -6,18 +6,20 @@ export default function Card(props) {
 		console.log(country);
 		return (
 			<div className="card">
-				<img src="" alt="country flag" />
+				<img src={country.flag} alt="country flag" />
 				<div className="card--text">
 					<h1 className="card--title">{country.countryName}</h1>
 					<ul className="card--details">
 						<li>
-							<span>Population:</span>
+							<span>Population: </span> {country.population}
 						</li>
 						<li>
-							<span>Region:</span>
+							<span>Region: </span>
+							{country.region}
 						</li>
 						<li>
-							<span>Capital:</span>{" "}
+							<span>Capital: </span>
+							{country.capital}
 						</li>
 					</ul>
 				</div>
